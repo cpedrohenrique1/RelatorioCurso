@@ -44,3 +44,19 @@ void MainWindow::on_pushButton_Buscar_clicked()
     }
 }
 
+
+void MainWindow::on_pushButton_Mostrar_clicked()
+{
+    try {
+        if (ui->lineEdit_EnderecoArquivo->text().isEmpty())
+        {
+            throw QString("Arquivo nao aberto");
+        }
+    }
+    catch (QString &erro) {
+            QMessageBox::critical(this, "Erro", erro);
+    }
+    catch (...) {
+    }
+}
+
