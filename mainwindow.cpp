@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QString>
 #include <QMessageBox>
+#include "buscararquivo.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -36,7 +37,8 @@ void MainWindow::on_pushButton_Limpar_clicked()
 void MainWindow::on_pushButton_Buscar_clicked()
 {
     try {
-        ui->lineEdit_EnderecoArquivo->setText()
+        Pedro::BuscarArquivo buscarArquivo;
+        ui->lineEdit_EnderecoArquivo->setText(buscarArquivo(this));
     } catch (...) {
         QMessageBox::critical(this, "Erro", "Erro ao buscar o arquivo");
     }
