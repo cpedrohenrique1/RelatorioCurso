@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include "buscararquivo.h"
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -39,6 +40,7 @@ void MainWindow::on_pushButton_Buscar_clicked()
     try {
         Pedro::BuscarArquivo buscarArquivo;
         ui->lineEdit_EnderecoArquivo->setText(buscarArquivo(this));
+
     } catch (...) {
         QMessageBox::critical(this, "Erro", "Erro ao buscar o arquivo");
     }
@@ -57,6 +59,7 @@ void MainWindow::on_pushButton_Mostrar_clicked()
             QMessageBox::critical(this, "Erro", erro);
     }
     catch (...) {
+        QMessageBox::critical(this, "Erro", "Erro ao mostrar o arquivo");
     }
 }
 
