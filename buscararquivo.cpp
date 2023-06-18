@@ -1,41 +1,96 @@
 #include "buscararquivo.h"
-#include <fstream>
-#include <iostream>
+#include "matricula.h"
+#include <QFile>
+#include <QTextStream>
+#include "aluno.h"
 
-namespace Pedro{
-
-QString BuscarArquivo::getEnderecoArquivo() const
-{
-    return enderecoArquivo;
-}
-
-BuscarArquivo::BuscarArquivo():
-    enderecoArquivo("")
+namespace Pedro
 {
 
-}
+    BuscarArquivo::BuscarArquivo()
+    {
+    }
 
-QString BuscarArquivo::operator()(QWidget *parent)
-{
-    std::string enderecoArquivo = QFileDialog::getOpenFileName(parent, "Abrir Arquivo", QDir::homePath(), "*.csv").toStdString();
-    std::ifstream arquivo;
-    arquivo.open(enderecoArquivo);
-    if (!arquivo.is_open())
+    QString BuscarArquivo::operator()(QWidget *parent)
     {
-        throw QString("Erro ao abrir o arquivo");
+        QString enderecoArquivo = QFileDialog::getOpenFileName(parent, "Abrir Arquivo", QDir::homePath(), "*.csv");
+        QFile arquivo(enderecoArquivo);
+
+        if (!arquivo.open(QIODevice::ReadOnly))
+        {
+            throw QString("Erro ao abrir o arquivo");
+        }
+        QTextStream in(&arquivo);
+        while (!in.atEnd())
+        {
+            QString linha = in.readLine();
+            QStringList parts = linha.split(";");
+            int i = 0;
+            Pedro::Aluno aluno;
+            for (QString part : parts)
+            {
+                Pedro::Matricula matricula;
+                switch (i)
+                {
+                case 0:
+                {
+                    QStringList partsMatricula = part.split(".");
+                    int j = 0;
+                    for (QString partMatricula : partsMatricula)
+                    {
+                        if (j == 0)
+                        {
+                            matricula.setAno(partMatricula.toInt());
+                        }
+                        if (j == 1)
+                        {
+                            matricula.setSemestre(partMatricula.toInt());
+                        }
+                        if (j == 2)
+                        {
+                            matricula.setCurso(partMatricula.toInt());
+                        }
+                        if (j == 3)
+                        {
+                            matricula.setNumero(partMatricula.toInt());
+                        }
+                        j++;
+                    }
+                    aluno.setMatricula(matricula);
+                    break;
+                }
+                case 1:
+                {
+                    aluno.setNome(part);
+                    break;
+                }
+                case 2:
+                {
+                    aluno.setTurno(part);
+                    break;
+                }
+                case 3:
+                {
+                    aluno.setPeriodo(part.toInt());
+                    break;
+                }
+                case 4:
+                {
+                    aluno.setOptativa(part);
+                    break;
+                }
+                case 5:
+                {
+                    aluno.setCurso(part);
+                    break;
+                }
+                }
+                i++;
+            }
+        }
+
+        arquivo.close();
+        return enderecoArquivo;
     }
-    arquivo.seekg(0);
-    std::string linha;
-    for (int i = 0; i < 3; i++)
-    {
-        getline(arquivo,linha);
-    }
-    while (getline(arquivo, linha))
-    {
-        std::cout << linha << (char)10;
-    }
-    arquivo.close();
-    return QString::fromStdString(enderecoArquivo);
-}
 
 }

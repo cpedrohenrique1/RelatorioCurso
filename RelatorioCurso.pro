@@ -9,13 +9,20 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    aluno.cpp \
     buscararquivo.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    matricula.cpp \
+    no.cpp
 
 HEADERS += \
+    IArvoreBinaria.h \
+    aluno.h \
     buscararquivo.h \
-    mainwindow.h
+    mainwindow.h \
+    matricula.h \
+    no.h
 
 FORMS += \
     mainwindow.ui

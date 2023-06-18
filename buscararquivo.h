@@ -7,12 +7,9 @@ namespace Pedro{
 
 class BuscarArquivo
 {
-private:
-    QString enderecoArquivo;
 public:
     BuscarArquivo();
     QString operator()(QWidget* parent);
-    QString getEnderecoArquivo() const;
 };
 
 }
