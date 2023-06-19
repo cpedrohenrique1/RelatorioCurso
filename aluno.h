@@ -17,7 +17,7 @@ public:
     Aluno();
     Aluno(Pedro::Matricula matricula, QString nome, QString turno, int periodo, QString optativa, QString curso);
 
-    const Pedro::Matricula &getMatricula() const;
+    Pedro::Matricula getMatricula() const;
     void setMatricula(const Pedro::Matricula &newMatricula);
     const QString &getNome() const;
     void setNome(const QString &newNome);

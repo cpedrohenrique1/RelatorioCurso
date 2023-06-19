@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     aluno.cpp \
+    arvorebinaria.cpp \
     buscararquivo.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -19,6 +20,7 @@ SOURCES += \
 HEADERS += \
     IArvoreBinaria.h \
     aluno.h \
+    arvorebinaria.h \
     buscararquivo.h \
     mainwindow.h \
     matricula.h \

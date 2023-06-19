@@ -3,6 +3,7 @@
 #include <QFile>
 #include <QTextStream>
 #include "aluno.h"
+#include "arvorebinaria.h"
 
 namespace Pedro
 {
@@ -29,11 +30,11 @@ namespace Pedro
             Pedro::Aluno aluno;
             for (QString part : parts)
             {
-                Pedro::Matricula matricula;
                 switch (i)
                 {
                 case 0:
                 {
+                    Pedro::Matricula matricula;
                     QStringList partsMatricula = part.split(".");
                     int j = 0;
                     for (QString partMatricula : partsMatricula)
@@ -87,6 +88,8 @@ namespace Pedro
                 }
                 i++;
             }
+            ArvoreBinaria arvore;
+
         }
 
         arquivo.close();

@@ -2,7 +2,7 @@
 
 namespace Pedro{
 
-const Pedro::Matricula &Aluno::getMatricula() const
+Pedro::Matricula Aluno::getMatricula() const
 {
     return matricula;
 }
