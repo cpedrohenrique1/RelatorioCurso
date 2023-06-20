@@ -12,6 +12,7 @@ SOURCES += \
     aluno.cpp \
     arvorebinaria.cpp \
     buscararquivo.cpp \
+    executarmostrar.cpp \
     main.cpp \
     mainwindow.cpp \
     matricula.cpp \
@@ -22,6 +23,7 @@ HEADERS += \
     aluno.h \
     arvorebinaria.h \
     buscararquivo.h \
+    executarmostrar.h \
     mainwindow.h \
     matricula.h \
     no.h

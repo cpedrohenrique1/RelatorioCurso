@@ -21,9 +21,10 @@ public:
     ArvoreBinaria();
     ~ArvoreBinaria();
     void inserir(Pedro::Aluno elemento){this->inserirRecursivo(&raiz,elemento);}
-    void remover(Pedro::Aluno elemento){this->removerRecursivo(&raiz, elemento);}
+    //void remover(Pedro::Aluno elemento){this->removerRecursivo(&raiz, elemento);}
     QTableWidget imprimirMatriculaCrescente(QString modo, QString ordem);
     QTableWidget imprimirMatriculaDecrescente(QString modo, QString ordem);
+    bool isEmpty() const{return !((bool)raiz);}
 };
 
 #endif // ARVOREBINARIA_H

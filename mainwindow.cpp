@@ -3,6 +3,7 @@
 #include <QString>
 #include <QMessageBox>
 #include "buscararquivo.h"
+#include "executarmostrar.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -39,8 +40,7 @@ void MainWindow::on_pushButton_Buscar_clicked()
 {
     try {
         Pedro::BuscarArquivo buscarArquivo;
-        ui->lineEdit_EnderecoArquivo->setText(buscarArquivo(this));
-
+        ui->lineEdit_EnderecoArquivo->setText(buscarArquivo(this, arvore));
     } catch (...) {
         QMessageBox::critical(this, "Erro", "Erro ao buscar o arquivo");
     }
@@ -54,6 +54,12 @@ void MainWindow::on_pushButton_Mostrar_clicked()
         {
             throw QString("Arquivo nao aberto");
         }
+        if (arvore.isEmpty())
+        {
+            throw QString("Arquivo nao lido");
+        }
+        ExecutarMostrar executarMostrar;
+        executarMostrar(ui->tableWidget_Output, arvore, ui->comboBox_SelecionarModo->currentText(), ui->comboBox_Ordem->currentText());
     }
     catch (QString &erro) {
             QMessageBox::critical(this, "Erro", erro);

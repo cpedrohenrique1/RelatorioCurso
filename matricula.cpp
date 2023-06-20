@@ -25,11 +25,23 @@ void Matricula::setNumero(int numero){
 	this->numero = numero;
 }
 
-bool Matricula::operator > (Pedro::Matricula &other){
-    if (ano > other.ano && semestre > other.semestre && curso > other.curso && numero > other.numero)
-	{
-		return true;
-	}
+bool Matricula::operator < (Pedro::Matricula other){
+    if (ano < other.ano)
+    {
+        return true;
+    }
+    if (semestre < other.semestre)
+    {
+        return true;
+    }
+    if (curso < other.curso)
+    {
+        return true;
+    }
+    if (numero < other.numero)
+    {
+        return true;
+    }
 	return false;
 }
 

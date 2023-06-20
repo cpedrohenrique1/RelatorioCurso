@@ -6,18 +6,17 @@ void ArvoreBinaria::inserirRecursivo(No **raiz, Pedro::Aluno elemento)
     {
         *raiz = new No(elemento);
     }
+    else if (elemento.getMatricula() < (*raiz)->getDado().getMatricula())
+        inserirRecursivo(&(*raiz)->esquerda, elemento);
+    else if (!(elemento.getMatricula() < (*raiz)->getDado().getMatricula()))
+        inserirRecursivo(&(*raiz)->direita, elemento);
     else
-    {
-        if (elemento.getMatricula() > (*raiz)->getDado().getMatricula())
-        {
-
-        }
-    }
+        throw QString("Elemento já Existe");
 }
 
-ArvoreBinaria::ArvoreBinaria():
-    raiz(0)
-{}
+ArvoreBinaria::ArvoreBinaria() : raiz(0)
+{
+}
 
 ArvoreBinaria::~ArvoreBinaria()
 {

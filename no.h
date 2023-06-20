@@ -6,9 +6,9 @@ class No
 {
 private:
     Pedro::Aluno dado;
+public:
     No* esquerda;
     No* direita;
-public:
     No();
     No(Pedro::Aluno dado);
     ~No();

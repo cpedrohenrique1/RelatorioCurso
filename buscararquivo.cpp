@@ -3,7 +3,6 @@
 #include <QFile>
 #include <QTextStream>
 #include "aluno.h"
-#include "arvorebinaria.h"
 
 namespace Pedro
 {
@@ -12,7 +11,7 @@ namespace Pedro
     {
     }
 
-    QString BuscarArquivo::operator()(QWidget *parent)
+    QString BuscarArquivo::operator()(QWidget *parent, ArvoreBinaria& arvore)
     {
         QString enderecoArquivo = QFileDialog::getOpenFileName(parent, "Abrir Arquivo", QDir::homePath(), "*.csv");
         QFile arquivo(enderecoArquivo);
@@ -88,8 +87,7 @@ namespace Pedro
                 }
                 i++;
             }
-            ArvoreBinaria arvore;
-
+            arvore.inserir(aluno);
         }
 
         arquivo.close();

@@ -15,7 +15,7 @@ private:
 public:
     Matricula();
     operator QString();
-    bool operator > (Pedro::Matricula &other);
+    bool operator < (Pedro::Matricula other);
     void setAno(int ano);
     void setSemestre(int semestre);
     void setCurso(int curso);
