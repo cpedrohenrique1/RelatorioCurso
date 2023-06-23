@@ -14,6 +14,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tableWidget_Output->setColumnCount(6);
     QStringList cabecalho = {"Matricula", "Nome", "Turno", "Periodo", "Optativa", "Curso"};
     ui->tableWidget_Output->setHorizontalHeaderLabels(cabecalho);
+    ui->tableWidget_Output->setColumnWidth(0, 100);
+    ui->tableWidget_Output->setColumnWidth(1, 250);
+    ui->tableWidget_Output->setColumnWidth(2, 150);
+    ui->tableWidget_Output->setColumnWidth(3, 50);
+    ui->tableWidget_Output->setColumnWidth(4, 200);
+    ui->tableWidget_Output->setColumnWidth(5, 200);
+    ui->tableWidget_Output->setEditTriggers(QAbstractItemView::NoEditTriggers);
 }
 
 MainWindow::~MainWindow()
@@ -25,7 +32,8 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_Limpar_clicked()
 {
     try {
-        ui->tableWidget_Output->clear();
+        ui->tableWidget_Output->setRowCount(0);
+        ui->tableWidget_Output->clearContents();
         ui->tableWidget_Output->setColumnCount(6);
         QStringList cabecalho = {"Matricula", "Nome", "Turno", "Periodo", "Optativa", "Curso"};
         ui->tableWidget_Output->setHorizontalHeaderLabels(cabecalho);

@@ -97,10 +97,10 @@ void ExecutarMostrar::operator ()(QTableWidget *parent, QString modo, QString or
                 parent->insertRow(linha);
                 parent->setItem(linha, 0, new QTableWidgetItem(aluno->getMatricula()));
                 parent->setItem(linha, 1, new QTableWidgetItem(aluno->getNome()));
-                parent->setItem(linha, 2, new QTableWidgetItem(aluno->getCurso()));
-                parent->setItem(linha, 3, new QTableWidgetItem(aluno->getOptativa()));
-                parent->setItem(linha, 4, new QTableWidgetItem(QString::number(aluno->getPeriodo())));
-                parent->setItem(linha, 5, new QTableWidgetItem(aluno->getTurno()));
+                parent->setItem(linha, 2, new QTableWidgetItem(aluno->getTurno()));
+                parent->setItem(linha, 3, new QTableWidgetItem(QString::number(aluno->getPeriodo())));
+                parent->setItem(linha, 4, new QTableWidgetItem(aluno->getOptativa()));
+                parent->setItem(linha, 5, new QTableWidgetItem(aluno->getCurso()));
             }
         }
         if (modo == "Nome")
