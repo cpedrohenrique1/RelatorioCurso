@@ -2,7 +2,6 @@
 #define BUSCARARQUIVO_H
 #include <QString>
 #include <QFileDialog>
-#include "arvorebinaria.h"
 
 namespace Pedro{
 
@@ -10,7 +9,7 @@ class BuscarArquivo
 {
 public:
     BuscarArquivo();
-    QString operator()(QWidget* parent, ArvoreBinaria& arvore);
+    QString operator()(QWidget* parent);
 };
 
 }

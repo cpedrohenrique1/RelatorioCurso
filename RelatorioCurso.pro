@@ -10,23 +10,19 @@ CONFIG += c++17
 
 SOURCES += \
     aluno.cpp \
-    arvorebinaria.cpp \
     buscararquivo.cpp \
     executarmostrar.cpp \
     main.cpp \
     mainwindow.cpp \
-    matricula.cpp \
-    no.cpp
+    matricula.cpp
 
 HEADERS += \
-    IArvoreBinaria.h \
+    AlunoComparatorMatricula.h \
     aluno.h \
-    arvorebinaria.h \
     buscararquivo.h \
     executarmostrar.h \
     mainwindow.h \
-    matricula.h \
-    no.h
+    matricula.h
 
 FORMS += \
     mainwindow.ui

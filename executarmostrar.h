@@ -1,13 +1,12 @@
 #ifndef EXECUTARMOSTRAR_H
 #define EXECUTARMOSTRAR_H
 #include <QTableWidget>
-#include "arvorebinaria.h"
 
 class ExecutarMostrar
 {
 public:
     ExecutarMostrar();
-    void operator ()(QTableWidget *parent, ArvoreBinaria arvore, QString modo, QString ordem);
+    void operator ()(QTableWidget *parent, QString modo, QString ordem, QString enderecoArquivo);
 };
 
 #endif // EXECUTARMOSTRAR_H
