@@ -17,7 +17,7 @@ namespace Pedro
 
         if (!arquivo.open(QIODevice::ReadOnly))
         {
-            throw QString("Erro ao abrir o arquivo");
+            throw QString("Arquivo nao pode ser aberto");
         }
         arquivo.close();
         return enderecoArquivo;

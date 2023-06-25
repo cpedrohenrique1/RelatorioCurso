@@ -3,8 +3,8 @@
 #include "aluno.h"
 
 struct AlunoComparatorMatricula{
-    bool operator()(const Pedro::Aluno* aluno1,const Pedro::Aluno* aluno2){
-        return aluno1->getMatricula() < aluno2->getMatricula();
+    bool operator()(Pedro::Aluno *a, Pedro::Aluno *b) const{
+        return a->getMatricula().CompararMatricula(b->getMatricula());
     }
 };
 

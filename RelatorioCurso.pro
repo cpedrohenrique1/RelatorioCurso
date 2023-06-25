@@ -17,7 +17,12 @@ SOURCES += \
     matricula.cpp
 
 HEADERS += \
+    AlunoComparatorCurso.h \
     AlunoComparatorMatricula.h \
+    AlunoComparatorNome.h \
+    AlunoComparatorOptativa.h \
+    AlunoComparatorPeriodo.h \
+    AlunoComparatorTurno.h \
     aluno.h \
     buscararquivo.h \
     executarmostrar.h \

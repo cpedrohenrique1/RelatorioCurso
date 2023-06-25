@@ -12,8 +12,40 @@ Matricula::Matricula():
 Matricula::operator QString(){
 	return QString::number(ano) + "." + QString::number(semestre) + "." + QString::number(curso) + "." + QString::number(numero);
 }
-void Matricula::setAno(int ano){
-	this->ano = ano;
+
+bool Matricula::CompararMatricula(Pedro::Matricula other)
+{
+    if (ano < other.ano)
+    {
+        return true;
+    }
+    if (ano == other.ano)
+    {
+        if (semestre < other.semestre)
+        {
+            return true;
+        }
+        if (semestre == other.semestre)
+        {
+            if (curso < other.curso)
+            {
+                return true;
+            }
+            if (curso == other.curso)
+            {
+                if (numero < other.numero)
+                {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
+
+void Matricula::setAno(int ano)
+{
+    this->ano = ano;
 }
 void Matricula::setSemestre(int semestre){
 	this->semestre = semestre;
@@ -23,26 +55,6 @@ void Matricula::setCurso(int curso){
 }
 void Matricula::setNumero(int numero){
 	this->numero = numero;
-}
-
-bool Matricula::operator < (Pedro::Matricula other){
-    if (ano < other.ano)
-    {
-        return true;
-    }
-    if (semestre < other.semestre)
-    {
-        return true;
-    }
-    if (curso < other.curso)
-    {
-        return true;
-    }
-    if (numero < other.numero)
-    {
-        return true;
-    }
-	return false;
 }
 
 }
