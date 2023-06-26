@@ -10,15 +10,14 @@
 
 ExecutarMostrar::ExecutarMostrar()
 {
-
 }
 
-void ExecutarMostrar::operator ()(QTableWidget *parent, QString modo, QString ordem, std::list<Pedro::Aluno*> &listaAlunos)
+void ExecutarMostrar::operator()(QTableWidget *parent, QString modo, QString ordem, std::list<Pedro::Aluno *> &listaAlunos)
 {
     if (modo == "Matricula")
     {
-        std::multiset<Pedro::Aluno*, AlunoComparatorMatricula> arvoreAlunos;
-        for (Pedro::Aluno *aluno: listaAlunos)
+        std::multiset<Pedro::Aluno *, AlunoComparatorMatricula> arvoreAlunos;
+        for (Pedro::Aluno *aluno : listaAlunos)
         {
             arvoreAlunos.insert(aluno);
         }
@@ -33,8 +32,8 @@ void ExecutarMostrar::operator ()(QTableWidget *parent, QString modo, QString or
     }
     if (modo == "Nome")
     {
-        std::multiset<Pedro::Aluno*, AlunoComparatorNome> arvoreAlunos;
-        for (Pedro::Aluno *aluno: listaAlunos)
+        std::multiset<Pedro::Aluno *, AlunoComparatorNome> arvoreAlunos;
+        for (Pedro::Aluno *aluno : listaAlunos)
         {
             arvoreAlunos.insert(aluno);
         }
@@ -49,8 +48,8 @@ void ExecutarMostrar::operator ()(QTableWidget *parent, QString modo, QString or
     }
     if (modo == "Curso")
     {
-        std::multiset<Pedro::Aluno*, AlunoComparatorCurso> arvoreAlunos;
-        for (Pedro::Aluno *aluno: listaAlunos)
+        std::multiset<Pedro::Aluno *, AlunoComparatorCurso> arvoreAlunos;
+        for (Pedro::Aluno *aluno : listaAlunos)
         {
             arvoreAlunos.insert(aluno);
         }
@@ -65,8 +64,8 @@ void ExecutarMostrar::operator ()(QTableWidget *parent, QString modo, QString or
     }
     if (modo == "Optativa")
     {
-        std::multiset<Pedro::Aluno*, AlunoComparatorOptativa> arvoreAlunos;
-        for (Pedro::Aluno *aluno: listaAlunos)
+        std::multiset<Pedro::Aluno *, AlunoComparatorOptativa> arvoreAlunos;
+        for (Pedro::Aluno *aluno : listaAlunos)
         {
             arvoreAlunos.insert(aluno);
         }
@@ -81,8 +80,8 @@ void ExecutarMostrar::operator ()(QTableWidget *parent, QString modo, QString or
     }
     if (modo == "Periodo")
     {
-        std::multiset<Pedro::Aluno*, AlunoComparatorPeriodo> arvoreAlunos;
-        for (Pedro::Aluno *aluno: listaAlunos)
+        std::multiset<Pedro::Aluno *, AlunoComparatorPeriodo> arvoreAlunos;
+        for (Pedro::Aluno *aluno : listaAlunos)
         {
             arvoreAlunos.insert(aluno);
         }
@@ -97,8 +96,8 @@ void ExecutarMostrar::operator ()(QTableWidget *parent, QString modo, QString or
     }
     if (modo == "Turno")
     {
-        std::multiset<Pedro::Aluno*, AlunoComparatorTurno> arvoreAlunos;
-        for (Pedro::Aluno *aluno: listaAlunos)
+        std::multiset<Pedro::Aluno *, AlunoComparatorTurno> arvoreAlunos;
+        for (Pedro::Aluno *aluno : listaAlunos)
         {
             arvoreAlunos.insert(aluno);
         }

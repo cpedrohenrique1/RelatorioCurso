@@ -10,7 +10,7 @@ namespace Pedro
     {
     }
 
-    QString BuscarArquivo::operator()(QWidget *parent, std::list<Pedro::Aluno*> &listaAlunos)
+    QString BuscarArquivo::operator()(QWidget *parent, std::list<Pedro::Aluno *> &listaAlunos)
     {
         QString enderecoArquivo = QFileDialog::getOpenFileName(parent, "Abrir Arquivo", QDir::homePath(), "*.csv");
         QFile arquivo(enderecoArquivo);
@@ -36,7 +36,8 @@ namespace Pedro
                     int j = 0;
                     for (QString partMatricula : partsMatricula)
                     {
-                        switch(j){
+                        switch (j)
+                        {
                         case 0:
                         {
                             matricula->setAno(partMatricula.toInt());

@@ -2,8 +2,10 @@
 #define ALUNOCOMPARATORCURSO_H
 #include "aluno.h"
 
-struct AlunoComparatorCurso{
-    bool operator()(Pedro::Aluno *a, Pedro::Aluno *b) const{
+struct AlunoComparatorCurso
+{
+    bool operator()(Pedro::Aluno *a, Pedro::Aluno *b) const
+    {
         if (a->getCurso() < b->getCurso())
         {
             return true;
@@ -15,6 +17,5 @@ struct AlunoComparatorCurso{
         return false;
     }
 };
-
 
 #endif // ALUNOCOMPARATORCURSO_H

@@ -2,8 +2,10 @@
 #define ALUNOCOMPARATORPERIODO_H
 #include "aluno.h"
 
-struct AlunoComparatorPeriodo{
-    bool operator ()(Pedro::Aluno *a, Pedro::Aluno *b) const{
+struct AlunoComparatorPeriodo
+{
+    bool operator()(Pedro::Aluno *a, Pedro::Aluno *b) const
+    {
         if (a->getPeriodo() < b->getPeriodo())
         {
             return true;

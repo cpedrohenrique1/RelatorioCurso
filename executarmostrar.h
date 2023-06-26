@@ -8,8 +8,8 @@
 class ExecutarMostrar
 {
 private:
-    template<typename Comparator>
-    void emOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno*, Comparator> &arvoreAlunos)
+    template <typename Comparator>
+    void emOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno *, Comparator> &arvoreAlunos)
     {
         for (Pedro::Aluno *aluno : arvoreAlunos)
         {
@@ -22,8 +22,8 @@ private:
             parent->setItem(parent->rowCount() - 1, 5, new QTableWidgetItem(aluno->getCurso()));
         }
     }
-    template<typename Comparator>
-    void reverseOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno*, Comparator> &arvoreAlunos)
+    template <typename Comparator>
+    void reverseOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno *, Comparator> &arvoreAlunos)
     {
         for (Pedro::Aluno *aluno : arvoreAlunos)
         {
@@ -39,7 +39,7 @@ private:
 
 public:
     ExecutarMostrar();
-    void operator()(QTableWidget *parent, QString modo, QString ordem, std::list<Pedro::Aluno*> &listaAlunos);
+    void operator()(QTableWidget *parent, QString modo, QString ordem, std::list<Pedro::Aluno *> &listaAlunos);
 };
 
 #endif // EXECUTARMOSTRAR_H

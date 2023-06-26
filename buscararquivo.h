@@ -5,14 +5,15 @@
 #include <list>
 #include "aluno.h"
 
-namespace Pedro{
-
-class BuscarArquivo
+namespace Pedro
 {
-public:
-    BuscarArquivo();
-    QString operator()(QWidget* parent, std::list<Pedro::Aluno*> &listaAlunos);
-};
+
+    class BuscarArquivo
+    {
+    public:
+        BuscarArquivo();
+        QString operator()(QWidget *parent, std::list<Pedro::Aluno *> &listaAlunos);
+    };
 
 }
 

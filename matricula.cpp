@@ -17,7 +17,8 @@ namespace Pedro
 
     bool Matricula::operator<(Matricula other) const
     {
-        if (ano < other.ano){
+        if (ano < other.ano)
+        {
             return true;
         }
         if (ano == other.ano)
