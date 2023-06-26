@@ -14,8 +14,8 @@ private:
 
 public:
     Matricula();
-    operator QString();
-    bool CompararMatricula(Pedro::Matricula other);
+    operator QString() const;
+    bool operator <(Matricula other) const;
     void setAno(int ano);
     void setSemestre(int semestre);
     void setCurso(int curso);

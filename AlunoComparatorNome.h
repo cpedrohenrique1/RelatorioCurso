@@ -4,7 +4,7 @@
 
 struct AlunoComparatorNome{
     bool operator ()(Pedro::Aluno *a, Pedro::Aluno *b) const{
-        return (bool) (a->getNome() < b->getNome());
+        return (bool)(a->getNome() < b->getNome());
     }
 };
 

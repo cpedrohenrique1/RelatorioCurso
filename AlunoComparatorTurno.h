@@ -10,7 +10,7 @@ struct AlunoComparatorTurno{
         }
         if (a->getTurno() == b->getTurno())
         {
-            return (bool) (a->getNome() < b->getNome());
+            return (bool)(a->getNome() < b->getNome());
         }
         return false;
     }

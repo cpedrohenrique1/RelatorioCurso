@@ -10,7 +10,7 @@ struct AlunoComparatorCurso{
         }
         if (a->getCurso() == b->getCurso())
         {
-            return (bool) (a->getNome() < b->getNome());
+            return (bool)(a->getNome() < b->getNome());
         }
         return false;
     }

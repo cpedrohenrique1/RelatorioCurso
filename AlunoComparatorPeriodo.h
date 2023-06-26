@@ -10,7 +10,7 @@ struct AlunoComparatorPeriodo{
         }
         if (a->getPeriodo() == b->getPeriodo())
         {
-            return (bool) (a->getNome() < b->getNome());
+            return (bool)(a->getNome() < b->getNome());
         }
         return false;
     }

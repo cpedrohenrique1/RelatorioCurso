@@ -4,7 +4,7 @@
 
 struct AlunoComparatorMatricula{
     bool operator()(Pedro::Aluno *a, Pedro::Aluno *b) const{
-        return a->getMatricula().CompararMatricula(b->getMatricula());
+        return (bool)(a->getMatricula() < b->getMatricula());
     }
 };
 

@@ -10,7 +10,7 @@ struct AlunoComparatorOptativa{
         }
         if (a->getOptativa() == b->getOptativa())
         {
-            return (bool) (a->getNome() < b->getNome());
+            return (bool)(a->getNome() < b->getNome());
         }
         return false;
     }

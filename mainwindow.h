@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <list>
+#include "aluno.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,5 +26,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    std::list<Pedro::Aluno*> listaAlunos;
 };
 #endif // MAINWINDOW_H
