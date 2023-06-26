@@ -4,10 +4,9 @@
 
 ExecutarMostrar::ExecutarMostrar()
 {
-
 }
 
-void ExecutarMostrar::operator ()(QTableWidget *parent, QString modo, QString ordem, QString enderecoArquivo)
+void ExecutarMostrar::operator()(QTableWidget *parent, QString modo, QString ordem, QString enderecoArquivo)
 {
     QFile arquivo(enderecoArquivo);
     QTextStream in(&arquivo);
@@ -17,7 +16,7 @@ void ExecutarMostrar::operator ()(QTableWidget *parent, QString modo, QString or
     }
     if (modo == "Matricula")
     {
-        std::multiset<Pedro::Aluno*, AlunoComparatorMatricula> arvoreAlunos;
+        std::multiset<Pedro::Aluno *, AlunoComparatorMatricula> arvoreAlunos;
         while (!in.atEnd())
         {
             QString linha = in.readLine();
@@ -97,7 +96,7 @@ void ExecutarMostrar::operator ()(QTableWidget *parent, QString modo, QString or
     }
     if (modo == "Nome")
     {
-        std::multiset<Pedro::Aluno*, AlunoComparatorNome> arvoreAlunos;
+        std::multiset<Pedro::Aluno *, AlunoComparatorNome> arvoreAlunos;
         while (!in.atEnd())
         {
             QString linha = in.readLine();
@@ -177,7 +176,7 @@ void ExecutarMostrar::operator ()(QTableWidget *parent, QString modo, QString or
     }
     if (modo == "Curso")
     {
-        std::multiset<Pedro::Aluno*, AlunoComparatorCurso> arvoreAlunos;
+        std::multiset<Pedro::Aluno *, AlunoComparatorCurso> arvoreAlunos;
         while (!in.atEnd())
         {
             QString linha = in.readLine();
@@ -257,7 +256,7 @@ void ExecutarMostrar::operator ()(QTableWidget *parent, QString modo, QString or
     }
     if (modo == "Optativa")
     {
-        std::multiset<Pedro::Aluno*, AlunoComparatorOptativa> arvoreAlunos;
+        std::multiset<Pedro::Aluno *, AlunoComparatorOptativa> arvoreAlunos;
         while (!in.atEnd())
         {
             QString linha = in.readLine();
@@ -337,7 +336,7 @@ void ExecutarMostrar::operator ()(QTableWidget *parent, QString modo, QString or
     }
     if (modo == "Periodo")
     {
-        std::multiset<Pedro::Aluno*, AlunoComparatorPeriodo> arvoreAlunos;
+        std::multiset<Pedro::Aluno *, AlunoComparatorPeriodo> arvoreAlunos;
         while (!in.atEnd())
         {
             QString linha = in.readLine();
@@ -417,7 +416,7 @@ void ExecutarMostrar::operator ()(QTableWidget *parent, QString modo, QString or
     }
     if (modo == "Turno")
     {
-        std::multiset<Pedro::Aluno*, AlunoComparatorTurno> arvoreAlunos;
+        std::multiset<Pedro::Aluno *, AlunoComparatorTurno> arvoreAlunos;
         while (!in.atEnd())
         {
             QString linha = in.readLine();

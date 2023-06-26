@@ -3,14 +3,15 @@
 #include <QString>
 #include <QFileDialog>
 
-namespace Pedro{
-
-class BuscarArquivo
+namespace Pedro
 {
-public:
-    BuscarArquivo();
-    QString operator()(QWidget* parent);
-};
+
+    class BuscarArquivo
+    {
+    public:
+        BuscarArquivo();
+        QString operator()(QWidget *parent);
+    };
 
 }
 

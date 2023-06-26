@@ -14,9 +14,10 @@ class ExecutarMostrar
 {
 public:
     ExecutarMostrar();
-    void operator ()(QTableWidget *parent, QString modo, QString ordem, QString enderecoArquivo);
+    void operator()(QTableWidget *parent, QString modo, QString ordem, QString enderecoArquivo);
 
-    void emOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno*, AlunoComparatorMatricula> arvoreAlunos){
+    void emOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno *, AlunoComparatorMatricula> arvoreAlunos)
+    {
         for (Pedro::Aluno *aluno : arvoreAlunos)
         {
             parent->insertRow(parent->rowCount());
@@ -28,7 +29,8 @@ public:
             parent->setItem(parent->rowCount() - 1, 5, new QTableWidgetItem(aluno->getCurso()));
         }
     }
-    void reverseOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno*, AlunoComparatorMatricula> arvoreAlunos){
+    void reverseOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno *, AlunoComparatorMatricula> arvoreAlunos)
+    {
         for (Pedro::Aluno *aluno : arvoreAlunos)
         {
             parent->insertRow(0);
@@ -41,7 +43,8 @@ public:
         }
     }
 
-    void emOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno*, AlunoComparatorNome> arvoreAlunos){
+    void emOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno *, AlunoComparatorNome> arvoreAlunos)
+    {
         for (Pedro::Aluno *aluno : arvoreAlunos)
         {
             parent->insertRow(parent->rowCount());
@@ -53,7 +56,8 @@ public:
             parent->setItem(parent->rowCount() - 1, 5, new QTableWidgetItem(aluno->getCurso()));
         }
     }
-    void reverseOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno*, AlunoComparatorNome> arvoreAlunos){
+    void reverseOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno *, AlunoComparatorNome> arvoreAlunos)
+    {
         for (Pedro::Aluno *aluno : arvoreAlunos)
         {
             parent->insertRow(0);
@@ -66,7 +70,8 @@ public:
         }
     }
 
-    void emOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno*, AlunoComparatorTurno> arvoreAlunos){
+    void emOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno *, AlunoComparatorTurno> arvoreAlunos)
+    {
         for (Pedro::Aluno *aluno : arvoreAlunos)
         {
             parent->insertRow(parent->rowCount());
@@ -78,7 +83,8 @@ public:
             parent->setItem(parent->rowCount() - 1, 5, new QTableWidgetItem(aluno->getCurso()));
         }
     }
-    void reverseOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno*, AlunoComparatorTurno> arvoreAlunos){
+    void reverseOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno *, AlunoComparatorTurno> arvoreAlunos)
+    {
         for (Pedro::Aluno *aluno : arvoreAlunos)
         {
             parent->insertRow(0);
@@ -91,7 +97,8 @@ public:
         }
     }
 
-    void emOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno*, AlunoComparatorCurso> arvoreAlunos){
+    void emOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno *, AlunoComparatorCurso> arvoreAlunos)
+    {
         for (Pedro::Aluno *aluno : arvoreAlunos)
         {
             parent->insertRow(parent->rowCount());
@@ -103,7 +110,8 @@ public:
             parent->setItem(parent->rowCount() - 1, 5, new QTableWidgetItem(aluno->getCurso()));
         }
     }
-    void reverseOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno*, AlunoComparatorCurso> arvoreAlunos){
+    void reverseOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno *, AlunoComparatorCurso> arvoreAlunos)
+    {
         for (Pedro::Aluno *aluno : arvoreAlunos)
         {
             parent->insertRow(0);
@@ -116,7 +124,8 @@ public:
         }
     }
 
-    void emOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno*, AlunoComparatorOptativa> arvoreAlunos){
+    void emOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno *, AlunoComparatorOptativa> arvoreAlunos)
+    {
         for (Pedro::Aluno *aluno : arvoreAlunos)
         {
             parent->insertRow(parent->rowCount());
@@ -128,7 +137,8 @@ public:
             parent->setItem(parent->rowCount() - 1, 5, new QTableWidgetItem(aluno->getCurso()));
         }
     }
-    void reverseOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno*, AlunoComparatorOptativa> arvoreAlunos){
+    void reverseOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno *, AlunoComparatorOptativa> arvoreAlunos)
+    {
         for (Pedro::Aluno *aluno : arvoreAlunos)
         {
             parent->insertRow(0);
@@ -141,7 +151,8 @@ public:
         }
     }
 
-    void emOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno*, AlunoComparatorPeriodo> arvoreAlunos){
+    void emOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno *, AlunoComparatorPeriodo> arvoreAlunos)
+    {
         for (Pedro::Aluno *aluno : arvoreAlunos)
         {
             parent->insertRow(parent->rowCount());
@@ -154,7 +165,8 @@ public:
         }
     }
 
-    void reverseOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno*, AlunoComparatorPeriodo> arvoreAlunos){
+    void reverseOrdem(QTableWidget *parent, std::multiset<Pedro::Aluno *, AlunoComparatorPeriodo> arvoreAlunos)
+    {
         for (Pedro::Aluno *aluno : arvoreAlunos)
         {
             parent->insertRow(0);
