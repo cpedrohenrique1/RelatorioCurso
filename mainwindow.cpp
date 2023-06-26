@@ -54,6 +54,10 @@ void MainWindow::on_pushButton_Buscar_clicked()
     try
     {
         Pedro::BuscarArquivo buscarArquivo;
+        if (!listaAlunos.empty())
+        {
+            listaAlunos.clear();
+        }
         ui->lineEdit_EnderecoArquivo->setText(buscarArquivo(this, listaAlunos));
     }
     catch (QString &erro)
