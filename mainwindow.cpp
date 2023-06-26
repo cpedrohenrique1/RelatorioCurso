@@ -47,7 +47,8 @@ void MainWindow::on_pushButton_Buscar_clicked()
     try
     {
         Pedro::BuscarArquivo buscarArquivo;
-        ui->lineEdit_EnderecoArquivo->setText(buscarArquivo(this));
+        enderecoArquivo = buscarArquivo(this);
+        ui->lineEdit_EnderecoArquivo->setText(enderecoArquivo);
     }
     catch (QString &erro)
     {
@@ -63,13 +64,13 @@ void MainWindow::on_pushButton_Mostrar_clicked()
 {
     try
     {
-        if (ui->lineEdit_EnderecoArquivo->text().isEmpty())
+        if (enderecoArquivo.isEmpty())
         {
             throw QString("Arquivo nao aberto");
         }
         on_pushButton_Limpar_clicked();
         ExecutarMostrar executarMostrar;
-        executarMostrar(ui->tableWidget_Output, ui->comboBox_SelecionarModo->currentText(), ui->comboBox_Ordem->currentText(), ui->lineEdit_EnderecoArquivo->text());
+        executarMostrar(ui->tableWidget_Output, ui->comboBox_SelecionarModo->currentText(), ui->comboBox_Ordem->currentText(), enderecoArquivo);
     }
     catch (QString &erro)
     {

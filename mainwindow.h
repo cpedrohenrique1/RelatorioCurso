@@ -27,5 +27,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    QString enderecoArquivo;
 };
 #endif // MAINWINDOW_H
